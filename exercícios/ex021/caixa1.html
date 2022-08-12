@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>modelo de caixas</title>
+    <style>
+        h1 { /* elemento box-level */
+            background-color: lightgray;
+            height: 300px; /* altura */
+            width: 300px; /* largura */
+            /*
+            border-width: 10px; tamanho da borda
+            border-style: solid; estilo da borda
+            border-color: lightblue; cor da borda
+            */
+
+            border: 10px solid lightblue; /* tamanho / estilo / cor | isso é um shorthand */
+
+             /*
+            padding-top: 10px; preenchimento - cima
+            padding-right: 10px; preenchimento - direita
+            padding-bottom: 10px; preenchimento - baixo
+            padding-left: 10px; preenchimento - esquerda
+            */
+            padding: 10px; /* cima / direito / baixo / esquerdo | se for tudo igual, pode-se informar somente 1 valor | se informar somente dois valores ele entende que o 1º VALOR será cima e baixo, o 2º VALOR entenderá como esquerda e direita */
+
+            /*
+            margin-top: 20px; margem - cima
+            margin-right: 20px; margem - direita
+            margin-bottom: 40px; margem - baixo
+            margin-left: 20px; margem - esquerda
+            margem - no meio (auto)
+            não poderia ser "text-align" pois não é uma box-level
+            */
+            margin: 20px auto 40px auto; /* cima / direita / baixo / esquerda */
+
+            /*
+            outline-width: 5px; contorno - largura / espessura
+            outline-style: dashed; contorno - estilo
+            outline-color: burlywood; contorno - estilo
+            */
+            outline: 5px dashed burlywood; /* largura / estilo / contorno */
+        }
+
+        a { /* elemento inline-level */
+            /*
+            border-width: 5px; borda - largura
+            border-style: dashed; borda - estilo
+            border-color: red; borda - cor
+            */
+            border: 5px dashed red;
+
+            /*
+            padding-top: 1px; preenchimento - cima
+            padding-right: 1px; preenchimento - direita
+            padding-bottom: 1px; preenchimento - baixo
+            padding-left: 1px; preenchimento - esquerda
+            */
+            padding: 5px;
+        }
+        /*
+        a tag display pode alterar ou tornar um elemento box-level ou inline-level usando o "display: inline", para inline-level, e "display: block", para box-level. e também colocar um inline com características de block com o "display: inline-block"
+        */
+    </style>
+</head>
+<body>
+    <h1>exemplo de caixa box-level</h1> <!-- o "box-level" sempre se inicia numa linha nova -->
+    <p>parágrafos também são exemplos de box-level, mas os <a href="#">links</a> <!-- o "#" indica que o link não tem URL --> são exemplos de caixas inline-level. <!-- o "inline-level" não inicia uma nova linha, pelo contrário, se mantém nela --> vamos ver como tudo isso funciona</p>
+    <!--
+        span(contêiner genérico): um box que não quebra a linha (inline level)
+        div(contêiner genérico): um box que quebra a linha (box-level)
+    -->
+    <h2 style="margin: auto; text-align:center;">abaixo um exemplo de box inline-level:</h2>
+    <img src="Screenshot_1.png" alt="imagem" style="display: block; margin: auto;">
+</body>
+</html>

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>links</title>
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        a {
+            color: lightblue;
+            text-decoration: none; /* decoração no texto, nesse caso nenhum */
+            font-weight: bold; /* peso da fonte */
+        }
+
+        a:visited { /* sites visitados ficam com essa cor */
+            color: blue;
+        }
+
+        a:hover { /* quando passar o mouse em cima isso acontece */
+            color: blueviolet;
+            text-decoration: underline; /* fica sublinhado*/
+        }
+
+        a:active { /* cor ativa (quando clica) */
+            /* como é um pseudo-classe tem que ter dois pontos (:) */
+            color: blue;
+        }
+
+        a::after { /* adiciona um conteúdo, depois do texto (nesse caso) */
+            content: '(link)'; /* gera um conteúdo em um elemento, no texto (nesse caso) */
+            text-decoration: none;
+            font-weight: normal;
+            color: black;
+        }
+        /*
+        # = ID
+        . = class
+        : = pseudo-class
+        :: = pseudo-element
+        > = children
+        */
+    </style>
+</head>
+<body>
+    <h1>personalizando links</h1>
+    <ul>
+        <li><a href="https://www.youtube.com/watch?v=XhCBruock0E" target="_blank">Mascara - Deftones</a></li>
+        <li><a href="https://www.youtube.com/watch?v=f0pdwd0miqs" target="_blank">Sextape - Deftones</a></li>
+        <li><a href="https://www.youtube.com/watch?v=yiaLpUnoFVs" target="_blank">My Own Summer (Shove It) - Deftones</a></li>
+        <!--
+            sites já visitados ficam sublinhados e os que não foram ficam de outra cor e sublinhados
+        -->
+    </ul>
+</html>

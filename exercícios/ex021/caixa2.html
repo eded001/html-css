@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>grouping tags</title>
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            background-color: dimgray;
+            margin: 0px;
+        }
+
+        header{
+            background-color: white;
+            padding: 10px;
+            margin: 10px;
+            border-radius: 10px; /* raio da borda */
+        }
+
+        h1 {
+            box-shadow: inset 0px 0px 25px 0px black; /* o "inset" faz com que a sombra fique dentro */
+        }
+
+        nav {
+            background-color: rgb(112, 112, 112);
+            padding: 3px;
+            box-shadow: 2px 2px 4px 1px hsla(0, 0%, 0%, 40%); /* deslocamento horizontal / vertical / espalhamento / cor */
+        }
+
+        nav > a { /* nav filho de a */
+            text-decoration: none;
+            color: white;
+            font-weight: bold;
+            margin-right: 30px;
+        }
+
+        nav > a:hover { /* a está como pseudo-class, para quando passar um mouse em cima acontecer algo */
+            text-decoration: underline;
+        }
+
+        main {
+            background-color: white;
+            padding: 10px;
+            margin: 10px;
+            border-radius: 10px;
+            box-shadow: 2px 2px 4px 0px rgba(0, 0, 0, 0.479); /* horizontal / vertical / borrão / espalhado / cor */
+        }
+
+        article {
+            background-color: lightgray;
+            padding: 5px;
+        }
+
+        article > aside { /* article filho de aside */
+            background-color: rgb(173, 173, 173);
+        }
+
+        footer {
+            background-color: black;
+            color: white;
+            text-align: center;
+            padding: 4px;
+            margin: 0px;
+        }
+
+        footer > p {
+            margin: 0px;
+        }
+
+        #bola {
+            height: 100px;
+            width: 100px;
+            background-color: white;
+            margin: 10px;
+            border-radius: 50%; /* fica redondo, nesse caso um círculo */
+        }
+    </style>
+</head>
+<body>
+    <header> <!-- cabeçalho -->
+        <h1>meu site</h1>
+        <nav> <!-- lista de links de navegação -->
+            <a href="#">link</a>
+            <a href="#">link</a>
+            <a href="#">link</a>
+            <a href="#">link</a>
+            <a href="#">link</a>
+        </nav>
+    </header>
+    <main> <!-- define o conteúdo principal -->
+        <section id="assuntos"> <!-- seção -->
+            <p>Esporte Política Tecnologia</p>
+        </section>
+        <section id="noticias">
+            <article> <!-- artigo -->
+                <h2>notícia sobre o brasil</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eligendi nihil nostrum qui a ea quam beatae at neque doloribus voluptatum consequuntur quidem nisi exercitationem provident, unde nemo quaerat dolores recusandae?</p>
+                <aside> <!-- sumário -->
+                    <p>artigo escrito por José da Silva</p>
+                </aside> <!-- tangenciar, estar fora -->
+            </article>
+        </section>
+    </main>
+    <footer> <!-- rodapé -->
+        Desenvolvido por mim
+    </footer>
+    <div id="bola"></div>
+</body>
+</html>

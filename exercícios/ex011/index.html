@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>mídias em HTML5</title>
+</head>
+<style>
+    body{
+        background-color: darkgray;
+    }
+</style>
+<body>
+    <h1>imagens dinâmicas</h1>
+    <p>tente abrir este site em diferentes dispositivos ou simplesmente aumente ou diminua o seu navegador</p>
+    <picture> <!--esta tag permite pôr outras tags dentro a fim de mudar a imagem-->
+        <source media="(max-width: 750px)" srcset="imagens/foto-p.png" type="image/png"> <!-- a tag"source" aplica mudanças -->
+        <source media="(max-width: 1050px)" srcset="imagens/foto-m.png" type="image/png"> <!-- sempre começar do menor para o maior -->
+        <img src="imagens/foto-g.png" alt="imagem flexível">
+    </picture>
+    <h1>reproduzindo áudio</h1>
+    <p>reproduzindo um áudio em HTML5</p>
+    <audio src="mídia/guanacast-33.mp3" controls></audio> <!-- a tag "audio" permite colocar arquivos MP3, WAV e OGG | e o "controls" e "autoplay" mostra o player de áudio-->
+    <audio preload="metadata"> <!-- 3 opções: auto, metadata, none. o "auto" ele só carrega o site quando abre o áudio, o "metadata" só carrega o nome do arquivo, "none" só abre quando o user solicita-->
+        <source src="mídia/guanacast-33.mp3" type="audio/mpeg">
+        <source src="mídia/guanacast-33.mp3" type="audio/ogg">
+        <source src="mídia/guanacast-33.mp3" type="audio/wav">
+    </audio>
+    <p>infelizmente seu navegador não suporta o arquivo, por isso não consegue reproduzir o arquivo de áudio, clique <a href="mídia/guanacast-33.mp3">aqui</a> para baixar o arquivo MP3</p>
+</body>
+</html>

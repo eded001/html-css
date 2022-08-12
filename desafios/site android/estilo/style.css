@@ -1,0 +1,197 @@
+@charset "UTF-8";
+
+* { /* seletor global */
+    padding: 0px;
+    margin: 0px;
+}
+
+@font-face { /* família de fontes que vão ser usadas*/
+    font-family: 'Android'; /* nome da fonte */
+    src: url('../fontes/idroid.otf') format('OpenType'); /* local da fonte */
+    font-weight: normal; /* peso da fonte */
+}
+
+:root { /* classe raiz: da árvore do documento */
+    /* variáveis de cores */
+    --cor0: #ebe5c5;
+    --cor1: #83e1ad;
+    --cor2: #3ddc84;
+    --cor3: #2fa866;
+    --cor4: #1a5c37;
+    --cor5: #063d1e;
+
+    /* variáveis de fontes */
+    --fonte-padrao: Arial, Verdana, Helvetica, sans-serif; 
+    --fonte-destaque: 'Bebas Neue', cursive;
+    --fonte-android: 'Android', cursive;
+}
+
+body { 
+    background-color: var(--cor1);
+    font-family: var(--fonte-padrao);
+}
+
+.externo::after { /* contêiner que adiciona um conteúdo usando o "content" */
+    content: '\1F517';
+}
+
+header {
+    background-image: linear-gradient(to bottom, var(--cor3), var(--cor5)); /* degradê */
+    font-family: var(--fonte-padrao);
+    text-align: center; /* centraliza o texto */
+    text-shadow: 1px 1px 1px #333; /* coloca sombra nas letras */
+    min-height: 150px; /* define a altura miníma do elemento e não permite ser menor que isso, caso diminua a janela por exemplo */
+}
+
+header > h1{ 
+    color: white;
+    font-family: var(--fonte-destaque);
+    font-weight: normal;
+    padding-top: 40px; /* preenchimento do topo */
+}
+
+header > p{
+    color: white;
+    padding: 0px 20px; /* preenchimento: 0 topo e baixo | 20 esquerda e direita */
+    font-size: 1.2em; /* tamanho da fonte */
+    max-width: 500px; /* largura máxima */
+    margin: auto; /* margem */
+    margin-bottom: 20px; /* margem topo */
+}
+
+nav {
+    background-color: var(--cor5);
+    padding-left: 10px; /* preenchimento esquerda */
+    padding-bottom: 10px; /* preenchimento baixo */
+    box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.247); /* sombra - caixa */
+}
+
+nav > a { /* father > son (arquivos pai e filho diretos | tem que pegar uma tag que antecede o filho) */
+    color: var(--cor1);
+    text-decoration: none; /* decoração do texto */
+    font-weight: bold; /* peso da fonte */
+    padding: 10px;
+    transition-duration: .5s; /* controla velocidade da animação */
+}
+
+nav > a:hover { /* quando o mouse ficar em cima do botão */
+    background-color: var(--cor2);
+    color: var(--cor5);
+    text-decoration: none;
+    border-radius: 5px; /* raio da borda */
+}
+
+main {
+    min-width: 300px; /* largura miníma */
+    max-width: 1000px; /* largura máxima */
+    margin: auto; /* margem */
+    margin-bottom: 30px;
+    padding: 20px;
+    border-bottom-left-radius: 10px; /* borda esquerda de baixo */
+    border-bottom-right-radius: 10px; /* borda direita de baixo */
+
+    background-color: white;
+    font-family: var(--fonte-padrao);
+    box-shadow:  0px 0px 10px rgba(0, 0, 0, 0.300);
+}
+
+main strong {
+    color: var(--cor5);
+    font-weight: bolder;
+}
+
+main a {
+    text-decoration: none;
+    color: var(--cor5);
+    font-weight: bold;
+    background-color: var(--cor1);
+    padding: 2px 6px;
+}
+
+main a:hover {
+    text-decoration: underline; /* decoração de texto, sublinhado */
+    color: var(--cor4);
+}
+
+main p {
+    margin: 15px 0px;
+    text-align: justify; /* texto justificado */
+    text-indent: 30px; /* indentação */
+    font-size: 1em; /* tamanho da fonte */
+    line-height: 1.4em; /* espaçamento */
+}
+
+main img {
+    width: 100%; /* largura */
+}
+
+main abbr {
+    text-decoration: none;
+}
+
+main h1 {
+    font-family: var(--fonte-android);
+    color: var(--cor5);
+    font-weight: normal;
+    font-size: 1.3em;
+}
+
+main h2 {
+    font-family: var(--fonte-android);
+    color: var(--cor4);
+    font-size: 1.3em;
+    font-weight: normal;
+    background-image: linear-gradient(to right, var(--cor1), white);
+    padding-left: 8px;
+}
+
+.pequena {
+    width: 50%;
+    display: block; /* define o tipo de visualização de um elemento */
+    margin: auto;
+}
+
+.video {
+    background-color: var(--cor5);
+    margin-bottom: 30px;
+    margin: 0px -20px 0px -20px;
+    padding: 20px;
+    padding-bottom: 58%;
+    position: relative; /* o elemento pode ser posicionado e ser acompanhado de outras propriedades como "top" ou "bottom" para mover horizontalmente, mas nesse caso como uma caixa */
+}
+
+.video > iframe {
+    position: absolute; /* mesma coisa, mas pode ficar em cima de outras caixas */
+    top: 5%; /* topo */
+    left: 5%; /* esquerda */
+    width: 90%; /* largura */
+    height: 90%; /* altura */
+}
+
+aside {
+    background-color: var(--cor1);
+    padding: 10px; /* preenchimento */
+    border-radius: 10px;
+    box-shadow: 3px 3px 8px rgba(0, 0, 0, 0.247);
+}
+
+aside > ul {
+    list-style-position: inside; /* estilo de listagem | dentro */
+    list-style-type: '\2714\00A0\00A0'; /* tipo de listagem | emoji */
+    columns: 2; /* coluna (que por algum motivo não funcionou) */
+}
+
+aside > h3 {
+    background-color: var(--cor4);
+    color: white;
+    padding: 10px;
+    margin: -10px -10px 0px -10px;
+    border-radius: 10px 10px 0px 0px;
+}
+
+footer {
+    background-color: var(--cor5);
+    color: white;
+    text-align: center;
+    text-decoration: none;
+}

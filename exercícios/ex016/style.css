@@ -1,0 +1,26 @@
+* {
+    font-family: Arial, Helvetica, sans-serif;
+    /* height: 100%; */
+}
+body {
+    background-image: linear-gradient(to right, #003840, #02A676);
+}
+main{
+    background-color: white;
+    border-radius: 10px; /* borda */
+    box-shadow: 5px 5px 15px #02bbac; /*sombra | 1º parâmetro: quanto anda para o lado, 2º parâmetro: quanto anda para baixo, 3º parâmetro: o quanto vai espalhar, 4º parâmetro: cor */
+    width: 600px; /* largura */
+    padding: 10px; /* preenchimento */
+    margin: auto; /* margem, neste caso, automático */
+}
+h1 {
+    color: #005A5B;
+    text-align: center;
+    text-shadow: 1px 1px 1px #005658; /* sombra no texto */
+}
+h2 {
+    color: #008C72;
+}
+p {
+    text-align: justify; /* texto alinhado */
+}

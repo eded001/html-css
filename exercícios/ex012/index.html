@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    body {
+        background-color: #a9a9a9;
+    }
+</style>
+<body>
+    <h1>inserindo vídeos hospedados localmente</h1>
+    <p>este vídeo está hospedado no meu próprio servidor</p>
+    <video controls poster="mídia/nuvens-foto.png" width="640" height="490" loop > <!-- a tag "poster" determina a imagem do player | a tag "loop" faz um looping | width = largura | height = altura -->
+        <source src="mídia/nuvens.mp4" type="video/mp4">
+        <source src="mídia/nuvens.m4v" type="video/mp4">
+        <source src="mídia/nuvens.webm" type="video/webm">
+        <p>seu browser não suporta outros arquivos de vídeo</p>
+    </video>
+    <h1>inserindo vídeos do YouTube</h1>
+    <iframe width="640" height="490" src="https://www.youtube.com/embed/CD-E-LDc384?start=7" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    <h1>inserindo vídeo do Vimeo</h1>
+    <iframe src="https://player.vimeo.com/video/77567417?h=cce3807618&color=a9a9a9&byline=0&portrait=0" width="640" height="490" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
+</html>
