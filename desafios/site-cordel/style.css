@@ -1,0 +1,36 @@
+@charset "UTF-8";
+
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+html, body {
+    min-height: 100vh; /* viewport height*/
+
+    background-color: darkgrey;
+}
+
+header {
+    background-color: black;
+    color: white;
+
+    text-align: center;
+}
+
+header > h1 {
+    padding-top: 50px;
+
+    /*
+    text-transform: lowercase;  transforma o texto
+    */
+
+    font-variant: small-caps; /* permite definir a variante da fonte para uma fonte */
+}
+
+footer {
+    background-color: black;
+    color: white;
+
+    text-align: center;
+}
