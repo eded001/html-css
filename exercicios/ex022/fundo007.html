@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alinhamento vertical</title>
+    <style>
+        #conteiner {
+            position: relative;
+
+            height: 96vh; /* vh = viewport */
+            padding: 10px;
+
+            background-color: purple;
+            background-image: url(imagens/target001.png);
+            background-size: 100% 100%;
+        }
+        #conteudo {
+            background-color: yellow;
+            background-image: url(imagens/target001.png);
+            background-size: 100% 100%;
+
+            height: 200px;
+            width: 400px;
+
+            position: absolute; /* essa propriedade define a posição final do elemento no documento | pode ser static, relative, absolute, sticky e fixed */
+            left: 50%;
+            top: 50%;
+
+            transform: translate(-50%, -50%); /* o transform permite modificar o espaço coordenado de acordo com os valores definidos. */
+        }
+    </style>
+</head>
+<body>
+    <section id="conteiner">
+        <article id="conteudo">
+        </article>
+    </section>
+</body>
+</html>
