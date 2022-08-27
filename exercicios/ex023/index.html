@@ -12,22 +12,18 @@
 
         table {
             width: 400px;
+            height: 400px;
             border-collapse: collapse; /* border-collapse = define se as células terão bordas compartilhadas ou separadas | o valor pode ser collapse ou separate (padrão) */
             border: 1px solid black;
         }
 
-        .linha {
-            background-color: gray;
-        }
-
         td {
-            border-top-left-radius: 1px solid black;
+            border: 1px solid black;
             padding: 10px;
+            text-align: center; /* alinhamento horizontal*/
+            vertical-align: middle; /* vertical-align = alinhamento vertical | pode ser top, middle e bottom*/
         }
 
-        .dado {
-            background-color: yellow;
-        }
     </style>
 </head>
 <body>
@@ -43,11 +39,11 @@
     -->
     <table>
         <tr> <!-- primeira linha -->
-            <td class="dado">A1</td>
-            <td >B1</td>
+            <td>A1</td>
+            <td>B1</td>
             <td>C1</td>
         </tr>
-        <tr class="linha"> <!-- segunda linha -->
+        <tr> <!-- segunda linha -->
             <td>A2</td>
             <td>B2</td>
             <td>C2</td>
