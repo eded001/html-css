@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>flexbox</title>
+    <style>
+        .container {
+            background-color: #ccc;
+
+            height: 500px;
+
+            display: flex;
+            /*
+            flex-direction: row;  
+            direção dos itens 
+            row | row-reverse | column | column-reverse
+            */
+            /*
+            flex-wrap: nowrap;
+            quebra de linha
+            wrap | nowrap | wrap-reverse
+            */
+            flex-flow: row wrap;
+            /*
+            shorthand para "flex-direction" e "flex-wrap"
+            */
+            justify-content: space-between;
+            /*
+            define o espaçamento
+            flex-start | flex-end  | space-evenly | center
+            start, end, left, right: organiza os textos
+            */
+            align-items: stretch;
+            /*
+            define o alinhamento horizontal
+            | baseline
+            */
+            align-content: center;
+            /*
+            define o alinhamento vertical 
+            flex-start | flex-end | center | stretch | space-between | space-around
+            *//*
+
+            */
+        }
+
+        .item {
+            background-color: #333;
+
+            color: #fff;
+
+            padding: 20px;
+
+            margin: 5px;
+
+            width: 200px;
+            height: 50px;
+        }
+
+        /* .bloco-1 {
+            padding: 50px 20px;
+        } */
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="item bloco-1">1</div>
+        <div class="item bloco-2">2</div>
+        <div class="item bloco-3">3</div>
+    </div>
+</body>
+</html>

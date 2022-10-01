@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>flexbox</title>
+    <style>
+        .container {
+            background-color: #ccc;
+
+            height: 500px;
+
+            display: flex;
+            flex-direction: row;
+            flex-wrap: nowrap;
+            justify-content: flex-start;
+            align-items: stretch;
+            /* align-content: flex-start; */
+        }
+
+        .item {
+            background-color: #333;
+
+            color: #fff;
+
+            padding: 20px;
+
+            margin: 5px;
+
+            height: 30px;
+
+            flex-grow: 1;
+            /*
+            permite aumentar um item a fim de manter uma proporção
+            */
+            flex-shrink: 1;
+            /*
+            permite reduzir o tamanho de um item a fim de manter uma proporção
+            */
+            flex-basis: 300px;
+            /*
+            define o tamanho de um item mantendo a proporção
+            */
+            flex: 1 1 300px;
+            /*
+            shorthand para "flex-grow", flex-shrink", "flex-basis"
+            flex: flex-grow flex-shrink flex-basis;
+            */
+        }
+
+        .bloco-1 {
+            /* order: 1; */
+            /*
+            permite mudar a ordem do item
+            */
+            /* align-self: auto; */
+            /*
+            permite alinhar itens na horizontal
+            auto | flex-start | flex-end | center | stretch | baseline
+            */
+            /* flex-grow: 0; */
+            /* flex-basis: 50px; */
+            flex-shrink: 3;
+        }
+
+        .bloco-2 {
+            /* order: 2; */
+        }
+
+        .bloco-3 {
+            /* order: 0; */
+        }
+
+        .bloco-4 {
+            /* order: 3; */
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="item bloco-1">1</div>
+        <div class="item bloco-2">2</div>
+        <div class="item bloco-3">3</div>
+        <div class="item bloco-4">4</div>
+    </div>
+</body>
+</html>
