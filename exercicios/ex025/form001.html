@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulário</title>
+    <style>
+        * {
+            font-family: Arial, Helvetica, sans-serif;
+        }
+    </style>
+</head>
+<body>
+    <h1>meu primeiro formulário</h1>
+    <form action="cadastro.php" autocomplete="off" method="post"> <!-- formulário | o autocomplete fica desligado, ou seja, o navegador não faz sugestões | o method define se os dados serão visíveis ao usuário, o "get" deixa visível e o "post" esconde -->
+        <p><label for="inome">Nome:</label> <!-- estabelece uma relação entre o nome e o input-->
+            <input type="text" name="nome" id="inome">
+            <!-- tipo nome id -->
+        </p>
+        <p><label for="isobrenome">Sobrenome:</label>
+            <input type="text" name="sobrenome" id="isobrenome">
+        </p>
+        <p><input type="submit" value="Enviar"></p>
+    </form>
+</body>
+</html>
