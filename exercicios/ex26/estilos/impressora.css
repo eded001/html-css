@@ -1,0 +1,35 @@
+@charset "UFT-8";
+
+/* estilo para impressoras */
+
+* {
+    margin: 10px;
+    padding: 10px;
+}
+
+html {
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 1.5em;
+    line-height: 1.5em;
+}
+header h1 {
+    text-align: center;
+}
+
+menu {
+    display: none;
+}
+
+article::after { /* adiciona um conteúdo após a tag */
+    content: 'Esse artigo foi impresso por Edgar Augusto'
+}
+
+article{
+    width: 100%;
+
+    display: block;
+
+    text-justify: justify;
+
+    margin: auto;
+}
