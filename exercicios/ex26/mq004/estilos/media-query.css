@@ -1,0 +1,96 @@
+@charset "UTF-8";
+
+/* versão mobile first */
+
+/*
+    typical device breakpoint
+    telas pequenas: até 600px
+    celular: 600px até 768
+    tablet: 768px até 992px
+    desktop: 992px até 1200px
+    telas grandes: acima 1200px
+*/
+
+@media print {
+    /* impressão*/
+
+    * {
+        font-family: 'Courier New', Courier, monospace;
+    }
+
+    body {
+        background-image: url(../imagens/back-print.jpg);
+
+        font-family:'Courier New', Courier, monospace;
+    }
+
+    main {
+        border: 2px solid black;
+    }
+
+    main::after {
+        content: 'essa impressão foi feita por Edgar Augusto'
+    }
+
+    main h1 {
+        text-shadow: none;
+
+        color:black;
+    }
+
+    #phone {display: none;}
+    #tablet {display: none;}
+    #print {display: block;}
+    #pc {display: none;}
+    #tv {display: none;}
+}
+
+@media screen and (min-width: 768px) and (max-width: 992px) {
+    /* tablet */
+
+    body {
+        background-image: url(../imagens/back-tablet.jpg);
+    }
+    
+    #phone {display: none;}
+    #tablet {display: block;}
+    #print {display: none;}
+    #pc {display: none;}
+    #tv {display: none;}
+}
+
+@media screen and (min-width: 992px) and (max-width: 1200px) {
+    /* pc */
+
+    body {
+        background-image: url(../imagens/back-pc.jpg);
+    }
+    
+    #phone {display: none;}
+    #tablet {display: none;}
+    #print {display: none;}
+    #pc {display: block;}
+    #tv {display: none;}
+}
+
+@media screen and (min-width: 1200px) {
+    /* telas grandes */
+
+    body {
+        background-image: url(../imagens/back-tv.jpg)
+    }
+
+    main {
+        width: 700px;
+    }
+
+    body {
+        background-image: url(../imagens/back-tablet.jpg);
+    }
+    
+    #phone {display: none;}
+    #tablet {display: none;}
+    #print {display: none;}
+    #pc {display: none;}
+    #tv {display: block;}
+}
