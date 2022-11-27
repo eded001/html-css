@@ -1,4 +1,4 @@
-function cliqueMenu() {
+function cliqueMenu() { 
     if (itensMenu.style.display == 'block') {
         itensMenu.style.display = 'none' // id > estilo > display
     } else {
