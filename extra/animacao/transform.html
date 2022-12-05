@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>transform</title>
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+
+            box-sizing: border-box;
+        }
+        .box img {
+            width: 200px;
+
+            border: 1px solid green;
+        }
+        body {
+            min-height: 100vh;
+
+            display: grid;
+            place-items: center;
+
+            background-color: gray;
+        }
+
+        .box {
+            border: 1px solid red;
+
+            background-color: white;
+        }
+
+        .box img {
+            transform: translate(100px, 100px); /* muda o item de lugar | X(esquerda/direita), Y(cima/baixo) */
+            transform: scale(2, 3); /* muda o tamanho de um item com base no tamanho dele | X(horizontalmente), Y(verticalmente) */
+            transform: rotate(45deg); /* rotaciona um item | também pode ser (<valor>turn)*/
+            transform: skew(-20deg, 45deg); /* inclina o elemento | X, Y */
+        }
+    </style>
+</head>
+<body>
+    <div class="box">
+        <img src="half-life-logo.png" alt="">
+    </div>
+</body>
+</html>

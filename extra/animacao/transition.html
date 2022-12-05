@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Transition</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+
+            box-sizing: border-box;
+        }
+        body {
+            background-color: lightblue;
+
+            display: grid;
+            place-items: center;
+
+            height: 100vh;
+        }
+
+        .caixa1 {
+            width: 200px;
+            height: 200px;
+
+            background-color: steelblue;
+
+            transition-property: background-color, border-radius; /* escolhe qual propriedade css vai passar pela transição */
+            transition-duration: 600ms, 1s; /* especifica o tempo em que a transição ocorre*/
+            /* transition-delay: .5s, 2s; define um atraso para o início e fim da transição */
+            transition-timing-function: cubic-bezier(.5,-0.39,.4,1.21); /* define uma função (podendo ser criada)
+            "ease-in": suaviza o início da animação
+            "ease-out": suaviza o final da animação
+            "ease-in-out": suaviza o início e o fim da animação
+            */
+        }
+
+        .caixa1:hover {
+            background-color: tomato;
+
+            border-radius: 50%;
+        }
+    </style>
+</head>
+<body>
+    <div class="caixa1"></div>
+</body>
+</html>
