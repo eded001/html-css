@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Grid</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+
+            font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif ;
+            font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+            font-size: 1.1em;
+        }
+
+        body {
+            height: 100vh;
+
+            display: grid;
+
+            grid-template-columns: 1fr 3fr 1.5fr;
+            grid-template-rows: 20vh 70vh 10vh;
+
+            grid-template-areas:
+            "header header header"
+            "main main aside"
+            "footer footer footer";
+        }
+
+        header {
+            background-color: yellow;
+
+            grid-area: header;
+
+            display: grid;
+            place-items: center;
+        }
+        header::after {content: 'header';}
+
+        main {
+            grid-area: main;
+
+            background-color: blue;
+
+            display: grid;
+            justify-content: space-evenly;
+            align-items: center;
+            text-align: center;
+
+            grid-template-columns: 50% 50%;
+
+            grid-template-areas:
+            "img nome"
+            "logo logo";
+        }
+
+        main .foto {grid-area: img;}
+        main .nome {grid-area: nome;}
+
+        main .icons {
+            grid-area: logo;
+
+            display: grid;
+
+            grid-template-columns: repeat(3, 1fr);
+
+            justify-content: space-evenly;
+            justify-items: center;
+
+            gap: 5px;
+        }
+
+        aside {
+            background-color: green;
+
+            grid-area: aside;
+
+            display: grid;
+            place-items: center;
+        }
+        aside::after {content: 'aside';}
+
+        footer {
+            background-color: red;
+
+            grid-area: footer;
+
+            display: grid;
+            place-items: center;
+        }
+        footer::after {content: 'footer';}
+    </style>
+</head>
+<body>
+    <header></header>
+    <main>
+        <div class="foto"><img src="ed-poggers-cortado.jpg" alt=""></div>
+
+        <div class="nome"><h1>eu</h1></div>
+
+        <div class="icons">
+            <img src="half-life-logo.png" alt="">
+            <img src="half-life-logo.png" alt="">
+            <img src="half-life-logo.png" alt="">
+        </div>
+    </main>
+    <aside></aside>
+    <footer></footer>
+</body>
+</html>

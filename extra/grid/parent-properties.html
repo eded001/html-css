@@ -24,7 +24,7 @@
             color: white;
         }
 
-        main {
+        .container {
             display: grid;
 
             grid-template-columns: 3fr 1fr ; /* define o tamanho/quantidade de colunas */
@@ -33,7 +33,7 @@
 
             grid-template-areas:
                 "header header"
-                "article aside"
+                "main aside"
                 "footer footer"
             ; /* da nome às linhas e define um modelo a ser seguido*/
         }
@@ -49,16 +49,16 @@
         }
         header::after {content: 'header';}
 
-        article {
+        main {
             background-color: blue;
 
             display: flex;
             justify-content: center;
             align-items: center;
 
-            grid-area: article;
+            grid-area: main;
         }
-        article::after {content: 'article';}
+        main::after {content: 'main';}
 
         aside {
             background-color: green;
@@ -84,11 +84,11 @@
     </style>
 </head>
 <body>
-    <main>
+    <div class="container">
         <header></header>
-        <article></article>
+        <main></main>
         <aside></aside>
         <footer></footer>
-    </main>
+    </div>
 </body>
 </html>
