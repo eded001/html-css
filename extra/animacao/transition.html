@@ -20,13 +20,13 @@
             height: 100vh;
         }
 
-        .caixa1 {
+        .caixa {
             width: 200px;
             height: 200px;
 
             background-color: steelblue;
 
-            transition-property: background-color, border-radius; /* escolhe qual propriedade css vai passar pela transição */
+            transition-property: background-color, border-radius, border; /* escolhe qual propriedade css vai passar pela transição */
             transition-duration: 600ms, 1s; /* especifica o tempo em que a transição ocorre*/
             /* transition-delay: .5s, 2s; define um atraso para o início e fim da transição */
             transition-timing-function: cubic-bezier(.5,-0.39,.4,1.21); /* define uma função (podendo ser criada)
@@ -36,14 +36,20 @@
             */
         }
 
-        .caixa1:hover {
+        .caixa:hover {
             background-color: tomato;
 
             border-radius: 50%;
         }
+
+        .caixa:active {
+            background-color: steelblue;
+
+            border-radius: 0;
+        }
     </style>
 </head>
 <body>
-    <div class="caixa1"></div>
+    <div class="caixa"></div>
 </body>
 </html>
