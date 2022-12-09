@@ -1,0 +1,18 @@
+.modelo02 {
+    height: 200px;
+    width: 200px;
+}
+
+.modelo01 {
+    height: 200px;
+    width: 200px;
+
+    /* animation: name duration timing-function delay iteration-count direction fill-mode; */
+    animation: scale 1s alternate infinite linear;
+}
+
+@keyframes scale {
+    to {
+        transform: scale(3);
+    }
+}

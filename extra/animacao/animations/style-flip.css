@@ -1,0 +1,17 @@
+.modelo02 {
+    height: 200px;
+    width: 200px;
+}
+
+.modelo01 {
+    height: 200px;
+    width: 200px;
+
+    animation: flip 5s alternate linear infinite;
+}
+
+@keyframes flip {
+    to {
+        transform: rotateX(360deg);
+    }
+}
