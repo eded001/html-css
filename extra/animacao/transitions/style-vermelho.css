@@ -1,0 +1,65 @@
+body {
+    background-image: linear-gradient(-45deg, rgb(255, 190, 75),
+    rgb(255, 173, 75),
+    rgb(255, 162, 75),
+    rgb(255, 155, 75),
+    rgb(255, 146, 75),
+    rgb(255, 140, 75),
+    rgb(255, 131, 75),
+    rgb(255, 125, 75));
+    background-size: 300% 300%;
+
+    animation: gradient 30s ease infinite;
+}
+
+a {
+    letter-spacing: .5px;
+
+    text-decoration: none;
+
+    color: white;
+
+    position: relative;
+}
+
+a::before {
+    content: '';
+
+    position: absolute;
+
+    top: 0;
+    left: 0;
+
+    width: 0;
+    height: 1px;
+
+    background-color: white;
+
+    transition: .4s ease;
+}
+a:hover::before {
+    left: 0;
+
+    width: 100%;
+}
+
+a::after {
+    content: '';
+
+    position: absolute;
+
+    bottom: 0;
+    right: 0;
+
+    width: 0;
+    height: 1px;
+
+    background-color: white;
+
+    transition: .4s ease;
+}
+a:hover::after {
+    right: 0;
+
+    width: 100%;
+}

@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grid - Child properties</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+
+            box-sizing: border-box;
+        }
+
+        body {
+            min-height: 100vh;
+            font-family: Arial, Helvetica, sans-serif;
+            text-shadow: 0 0 1px black;
+
+            color: white;
+        }
+
+        .container {
+            background-color: darkgray;
+
+            width: 100vw;
+            height: 100vh;
+
+            display: grid;
+
+            grid-template-columns: repeat(3, 200px);
+            grid-template-rows: repeat(3, 200px);
+
+            place-content: center; /* shorthand para align-content e justify-content |
+             permite alinhar o próprio grid em relação ao espaço ao redor (fora) */
+            /* align-content: center; alinhamento vertical */
+            /* justify-content: center; alinhamento horizontal*/
+
+            gap: 5px;
+        }
+
+        .items {
+            background-color: gray;
+
+            display: grid;
+
+            /* place-items: center; shorthand para align-items e justify-items |
+             permite alinhar o grid dentro da célula */
+            /* align-items: center; alinhamento vertical */
+            /* justify-items: center; alinhamento horizontal*/
+        }
+
+        .subitem{
+            background-color: lightgray;
+
+            height: 100px;
+            width: 100px;
+        }
+
+        .start {
+            place-self: start; /* shorthand para align-self e justify-self |
+             permite alinhar o grid em si dentro da célula */
+            /* align-self: center; alinhamento vertical */
+            /* justify-self: center; alinhamento horizontal*/
+        }
+
+        .center {place-self: center;}
+
+        .end {place-self: end;}
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="items">
+            <div class="subitem start"></div>
+        </div>
+        <div class="items">
+            <div class="subitem start"></div>
+        </div>
+        <div class="items">
+            <div class="subitem start"></div>
+        </div>
+        <div class="items">
+            <div class="subitem center"></div>
+        </div>
+        <div class="items">
+            <div class="subitem center" id="end"></div>
+        </div>
+        <div class="items">
+            <div class="subitem center"></div>
+        </div>
+        <div class="items">
+            <div class="subitem end"></div>
+        </div>
+        <div class="items">
+            <div class="subitem end"></div>
+        </div>
+        <div class="items">
+            <div class="subitem end"></div>
+        </div>
+    </div>
+</body>
+</html>

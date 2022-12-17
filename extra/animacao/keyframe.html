@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@keyframe</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+
+            box-sizing: border-box;
+        }
+        body {
+            background: url(Amazonia-SFX.jpg) no-repeat center center;
+            background-size: cover;
+
+            display: grid;
+            place-items: center start;
+
+            height: 100vh;
+        }
+
+        .aviao {
+            animation: fly; /* nome */
+            animation-duration: 2s; /* duração */
+            animation-timing-function: linear; /* função de tempo | tendo os valores padrão ou steps(frames) */
+            /* animation-delay: 1s; define o atraso da animação */
+            animation-iteration-count: infinite; /* define o número de vezes que uma animação é reproduzida*/
+            animation-direction: alternate; /* define a direção de uma animação 
+            animation-fill-mode: forwards; /* define os valores que serão aplicados antes e/ou depois da animação | "backwards": volta para o início da animação |"forwards": permanece no final da animação | "both": acontece os dois */
+            animation-play-state: running; /* define se a animação está pausada ou acontecendo */
+
+            /* shorthand: animation: name duration timing-function delay iteration-count direction fill-mode; */
+        }
+
+        .aviao:hover{animation-play-state: paused;}
+
+        /* controla as etapas de uma animação | "from"(o%), "to"(100%) ou simplesmente "to"*/
+        @keyframes fly {
+            to {
+                transform: translate(calc(100vw - 200px), 0);
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="aviao"><img src="crianca.png" alt=""></div>
+</body>
+</html>

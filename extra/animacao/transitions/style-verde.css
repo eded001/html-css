@@ -1,0 +1,107 @@
+body {
+    
+    background-size: 500% 500%;
+    
+    animation: gradient 40s ease infinite;
+    background-image: linear-gradient(-45deg, rgb(37, 106, 37),
+    rgb(43, 124, 44),
+    rgb(50, 143, 50),
+    rgb(56, 163, 56),
+    rgb(62, 182, 62),
+    rgb(74, 195, 75),
+    rgb(93, 202, 93),
+    rgb(112, 208, 112),
+    rgb(130, 214, 130),
+    rgb(149, 222, 150));
+
+    /*
+    rgb(0, 138, 0),
+    rgb(0, 150, 0),
+    rgb(0, 145, 0),
+    rgb(0, 140, 0),
+    rgb(0, 135, 0),
+    rgb(0, 130, 0),
+    rgb(0, 125, 0),
+    rgb(0, 120, 0),
+    rgb(0, 115, 0),
+    rgb(0, 110, 0),
+    rgb(0, 105, 0),
+    rgb(0, 100, 0),
+    rgb(0, 95, 0),
+    rgb(0, 90, 0),
+    rgb(0, 85, 0),
+    rgb(0, 80, 0),
+    rgb(0, 75, 0),
+    rgb(0, 70, 0),
+    rgb(0, 65, 0),
+    rgb(0, 60, 0),
+    rgb(0, 55, 0),
+    rgb(0, 50, 0)*/
+}
+
+a {
+    text-decoration: none;
+
+    color: rgb(8, 116, 8);
+
+    position: relative;
+
+    padding: 0 2px;
+}
+
+a::before {
+    background-color: white;
+
+    position: absolute;
+
+    content: '';
+
+    left: 50%;
+    right: 50%;
+
+    transform: translateX(1px);
+
+    height: 100%;
+    width: 0;
+
+    opacity: 100%;
+
+    transition: 1.3s ease;
+}
+a:hover::before {
+    left: 0;
+    right: 0;
+
+    height: 100%;
+    width: 100%;
+
+    opacity: 0%;
+}
+
+a::after {
+    position: absolute;
+
+    content: '';
+
+    border: 1px solid white;
+
+    opacity: 0;
+
+    left: 50%;
+    right: 50%;
+
+    height: 97%;
+    width: 0;
+
+    transition: 1.3s ease;
+}
+
+a:hover::after {
+    opacity: 100%;
+
+    height: 97%;
+    width: 100%;
+
+    left: 0;
+    right: 0;
+}
